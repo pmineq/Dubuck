@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+
+/* =================================
+*   account css
+*   2023-11-20 작성
+*   375px 기준
+================================== */
+
+
+
+/* =================================
+   login
+================================== */
+.login-group {
+  width: 100%; padding: 0 40px 50px; box-sizing: border-box; 
+
+  .input-wrap {
+   & + .btn {margin-top: 40px; }
+  }
+
+  .btn-text {margin-top: 8px; }
+
+}
+
+
+/* =================================
+   join
+================================== */
+
+
+
+/* =================================
+   Find
+================================== */
+.find {
+
+  &-step01 {
+    .btn {margin-top: 40px; }
+  }
+  &-step02 {
+    margin-top: 4px; 
+
+    .input-wrap {width: 120px; }
+    .btn {
+      width: calc(100% - 130px); 
+      margin-top: 0; margin-left: 10px; 
+      font-size: 14px; 
+    }
+  }
+
+  &-step03 {
+    margin-top: 4px; 
+    .btn {margin-top: 40px; }
+  }
+
+}
+

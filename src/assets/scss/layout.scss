@@ -1,0 +1,195 @@
+@charset "utf-8";
+@import "/src/App.scss";
+
+/* =================================
+*   layout css
+*   2023-11-11 작성
+*   375px 기준
+================================== */
+* {margin: 0; padding: 0; font-family: 'KIMM', 'SpaceGrotesk', Apple SD Gothic Neo, 돋움, dotum, sans-serif; font-size: inherit; word-break: break-all; }
+html, body {width: 100%; height: 100%; color: $blackClr; }
+body {background-color: #f7f8f9; }
+#wrapper {min-height: 100vh; background-color: #fff; }
+
+h1, h2, h3, h4, p {margin: 0; }
+ul, ol, li, dl, dt, dd {list-style: none; margin: 0; padding: 0; }
+button {padding: 0; border: 0; background-color: transparent; cursor: pointer; }
+a {color: inherit; text-decoration: none; }
+
+
+#container {
+  position: relative; 
+  height: 100%; min-height: 100vh; 
+  padding: 0; box-sizing: border-box; 
+  background-color: #fff;
+
+  &:after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+}
+
+
+
+.no-scroll {height: 100%; min-height: 100%; overflow: hidden !important; touch-action: none; }
+
+
+/* PC */
+@media (min-width: 376px) {
+  #wrapper {
+    width: 375px; 
+    margin: 0 auto; 
+    box-shadow: 0px 0px 7px 0px rgba(113, 118, 130, 0.4); 
+  }
+
+}
+
+
+
+
+/* ===================================================
+	header
+====================================================*/
+
+#header {
+  display: block;
+  position: relative;
+  width: 100%; height: 50px;
+  padding: 0 20px; box-sizing: border-box; 
+
+  &::after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+
+  h1 {
+    display: none;
+    float: left;
+    margin-left: 12px;
+    font-size: 18px; font-weight: 300; line-height: 30px; color: $blackClr; 
+  }
+
+  .header-logo {
+    display: block; 
+    width: 50px; height: 30px;
+
+    img {display: block; width: auto; height: 100%; }
+  }
+
+  .header-back {
+    float: left;
+    width: 30px; height: 30px;
+    background-image: url("../images/header_back.png"); background-repeat: no-repeat;
+    background-size: auto 10px; background-position: left center; 
+
+    + h1 {
+      display: block;
+    }
+
+    ~ .header-logo {display: none; }
+  }
+
+
+  + #container {
+    min-height: calc(100vh - 50px);
+    padding: 0 20px 50px;
+  }
+
+} 
+
+
+
+
+/* type-logo */
+#header {
+  padding: 10px 20px; 
+
+
+
+}
+
+
+/* ===================================================
+	error
+====================================================*/
+#error {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 100%;
+  padding: 0 30px; box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  h1 {
+    $size:160px;
+    display: block;
+    width: $size;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    font-size: 58px; color: $pointClr;
+  }
+
+  strong {
+    display: block;
+    font-size: 24px; text-align: center;
+  }
+
+  p {
+    margin-top: 10px;
+    color: #888;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+
+
+  .zero {
+    position: relative;
+    
+    .eye {
+      $y:-10px;
+      &1, &2 {
+        display: block;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translateY($y);
+        width: 4px; height: 7px;
+        border-radius: 999px;
+        background-color: $pointClr;
+      }
+      &1 {
+        transform: translate(-7px, $y);
+      }
+      &2 {
+        transform: translate(3px, $y);
+      }
+    }
+
+    .lips {
+      position: absolute;
+      width: 6px; height: 4px;
+      border: 4px solid $pointClr; border-bottom: 0; 
+      border-top-left-radius: 7px; border-top-right-radius: 7px;
+      top: 50%; left: calc(50% - 7px);
+      transform: translateY(-1px);
+    }
+
+  }
+
+}
+
+
+
+
+/* ===================================================
+	intro
+====================================================*/
+.intro-btn-group {
+  width: 100%; 
+  padding: 0 40px 50px; 
+  box-sizing: border-box; 
+
+  .btn + .btn {margin-top: 8px; }
+}
+
+
+
+
+
+
+
