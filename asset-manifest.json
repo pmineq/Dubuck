@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/Dubuck/static/css/main.89e5f054.css",
+    "main.js": "/Dubuck/static/js/main.7393e5df.js",
+    "static/js/787.a32ce743.chunk.js": "/Dubuck/static/js/787.a32ce743.chunk.js",
+    "static/media/KIMM_bold.woff2": "/Dubuck/static/media/KIMM_bold.ec59780b4493e25242c2.woff2",
+    "static/media/KIMM_Light.ttf": "/Dubuck/static/media/KIMM_Light.ca86f545b13cffa9e2c8.ttf",
+    "static/media/KIMM_bold.ttf": "/Dubuck/static/media/KIMM_bold.e2c9f2e4cb62ca27fea5.ttf",
+    "static/media/KIMM_Light.woff2": "/Dubuck/static/media/KIMM_Light.5349e676ef98a11748af.woff2",
+    "static/media/KIMM_bold.woff": "/Dubuck/static/media/KIMM_bold.6334bd6a4e950095edf9.woff",
+    "static/media/KIMM_Light.woff": "/Dubuck/static/media/KIMM_Light.3c9b13e573185a9315ce.woff",
+    "static/media/mascot.png": "/Dubuck/static/media/mascot.273f3d5aed19431c3014.png",
+    "static/media/SpaceGrotesk-SemiBold.woff2": "/Dubuck/static/media/SpaceGrotesk-SemiBold.d313659469ec343ef5d6.woff2",
+    "static/media/SpaceGrotesk-Bold.woff2": "/Dubuck/static/media/SpaceGrotesk-Bold.07c55da854944b39d2db.woff2",
+    "static/media/SpaceGrotesk-Regular.woff2": "/Dubuck/static/media/SpaceGrotesk-Regular.b255b4d822eb900851b4.woff2",
+    "static/media/SpaceGrotesk-Medium.woff2": "/Dubuck/static/media/SpaceGrotesk-Medium.584c254859b177aec962.woff2",
+    "static/media/SpaceGrotesk-Light.woff2": "/Dubuck/static/media/SpaceGrotesk-Light.c4e0f30c44be4990542b.woff2",
+    "static/media/SpaceGrotesk-Regular.woff": "/Dubuck/static/media/SpaceGrotesk-Regular.d8b17e8f94a317530504.woff",
+    "static/media/SpaceGrotesk-Medium.woff": "/Dubuck/static/media/SpaceGrotesk-Medium.7a7144dc58f1df858fed.woff",
+    "static/media/SpaceGrotesk-SemiBold.woff": "/Dubuck/static/media/SpaceGrotesk-SemiBold.00f05cc167ca13d2f5eb.woff",
+    "static/media/SpaceGrotesk-Light.woff": "/Dubuck/static/media/SpaceGrotesk-Light.d27d4bdcd2f2103dcef1.woff",
+    "static/media/SpaceGrotesk-Bold.woff": "/Dubuck/static/media/SpaceGrotesk-Bold.5fd48480518064d36905.woff",
+    "static/media/box_study.svg": "/Dubuck/static/media/box_study.06c937e89c5ab16c259e.svg",
+    "index.html": "/Dubuck/index.html",
+    "static/media/box_test.svg": "/Dubuck/static/media/box_test.828546efa6874bee2085.svg",
+    "static/media/box_result.svg": "/Dubuck/static/media/box_result.8cb7885a57866b7ff2b2.svg",
+    "main.89e5f054.css.map": "/Dubuck/static/css/main.89e5f054.css.map",
+    "main.7393e5df.js.map": "/Dubuck/static/js/main.7393e5df.js.map",
+    "787.a32ce743.chunk.js.map": "/Dubuck/static/js/787.a32ce743.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89e5f054.css",
+    "static/js/main.7393e5df.js"
+  ]
+}
