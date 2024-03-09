@@ -10,7 +10,7 @@ import Toparea from '../../components/Toparea';
 
 const Login = (props) => {
   return (
-		<Layout>
+		<Layout containName='main'>
 			<Toparea/>
 			<div className="login-group">
 				<div className="input-wrap">

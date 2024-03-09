@@ -3,7 +3,7 @@ import Layout from '../../components/Layout';
 
 const Join = (props) => {
   return (
-		<Layout header={{title:'회원가입', Backbtn:true, link:'/'}}>
+		<Layout header={{title:'회원가입', Backbtn:true, link:'/'}} containName='account'>
 
 			<div className="input-group">
         <div className="input-wrap">

@@ -8,7 +8,7 @@ import Toparea from '../components/Toparea';
 
 const Intro = (props) => {
   return (
-		<Layout>
+		<Layout containName='main'>
 			<Toparea/>
 			<div className="intro-btn-group">
 				<Link to="/Login" className="btn btn-goto">로그인</Link>

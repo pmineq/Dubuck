@@ -1,9 +1,50 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from '../../components/Layout';
+import $ from "jquery";
 
 const Find = (props) => {
+
+  useEffect(() => {
+    //select 
+    $('.select button').text($('.select ul li:first-child').text());
+  
+    $('.select button').on('click', function(){
+      var selectUl = $(this).next('ul')
+      if(selectUl.is(':visible')) {
+        selectUl.hide();
+      } else {
+        selectUl.show();
+      }
+    });
+  
+    $('.select li').on('click', function(){
+      var selectText = $(this).text();
+      $(this).parent('ul').siblings('button').text(selectText);
+  
+      if($('.select button').text() === '직접입력') {
+        $('#email_direct').show().focus();
+      } else {
+        $('#email_direct').hide().blur();
+      }
+    });
+
+  }, []);
+
+
+
+  function step01() {
+    $('.find-step01').find('.btn').hide();
+    $('.find-step02').show();
+  }
+
+  function step02() {
+    $("#authentication").prop('disabled', true);
+    $('.find-step03').show();
+  }
+
+
   return (
-		<Layout header={{title:'계정찾기', Backbtn:true, link:'/Login'}}>
+		<Layout header={{title:'계정찾기', Backbtn:true, link:'/Login'}} containName='account'>
 
 			<div className="find-step01">
         <div className="input-wrap">
@@ -30,7 +71,7 @@ const Find = (props) => {
           <input type="text" id="email_direct" placeholder="직접 입력해주세요"/>
         </div>
 
-        <button type="button" className="btn">인증번호 전송</button>
+        <button type="button" className="btn" onClick={step01}>인증번호 전송</button>
       </div>
 
       <div className="find-step02">
@@ -38,7 +79,7 @@ const Find = (props) => {
           <div className="input-wrap">
             <input type="text" id="authentication" placeholder="인증번호"/>
           </div>
-          <button type="button" className="btn btn-black">인증번호 확인</button>
+          <button type="button" className="btn btn-black" onClick={step02}>인증번호 확인</button>
         </div>
         <p className="text-guide text-right">인증번호가 발송 되었습니다.<br/>발급된 인증번호를 입력하세요.</p>
         <p className="text-guide text-right text-colred">인증번호가 확인 되지 않았습니다.</p>
@@ -47,7 +88,7 @@ const Find = (props) => {
       <div className="find-step03">
         <div className="input-wrap">
           <label htmlFor="pw_change">비밀번호 수정</label>
-          <input type="text" id="pw_change" placeholder="********"/>
+          <input type="password" id="pw_change" placeholder="********"/>
         </div>
 
         <button type="button" className="btn">비밀번호 수정</button>
