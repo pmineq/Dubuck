@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dubuck/static/css/main.89e5f054.css",
-    "main.js": "/Dubuck/static/js/main.7393e5df.js",
+    "main.css": "/Dubuck/static/css/main.a084f3ca.css",
+    "main.js": "/Dubuck/static/js/main.feab850c.js",
     "static/js/787.a32ce743.chunk.js": "/Dubuck/static/js/787.a32ce743.chunk.js",
     "static/media/KIMM_bold.woff2": "/Dubuck/static/media/KIMM_bold.ec59780b4493e25242c2.woff2",
     "static/media/KIMM_Light.ttf": "/Dubuck/static/media/KIMM_Light.ca86f545b13cffa9e2c8.ttf",
@@ -24,12 +24,12 @@
     "index.html": "/Dubuck/index.html",
     "static/media/box_test.svg": "/Dubuck/static/media/box_test.828546efa6874bee2085.svg",
     "static/media/box_result.svg": "/Dubuck/static/media/box_result.8cb7885a57866b7ff2b2.svg",
-    "main.89e5f054.css.map": "/Dubuck/static/css/main.89e5f054.css.map",
-    "main.7393e5df.js.map": "/Dubuck/static/js/main.7393e5df.js.map",
+    "main.a084f3ca.css.map": "/Dubuck/static/css/main.a084f3ca.css.map",
+    "main.feab850c.js.map": "/Dubuck/static/js/main.feab850c.js.map",
     "787.a32ce743.chunk.js.map": "/Dubuck/static/js/787.a32ce743.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89e5f054.css",
-    "static/js/main.7393e5df.js"
+    "static/css/main.a084f3ca.css",
+    "static/js/main.feab850c.js"
   ]
 }
