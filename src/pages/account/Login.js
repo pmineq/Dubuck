@@ -16,10 +16,12 @@ const Login = (props) => {
 				<div className="input-wrap">
 					<label htmlFor="email">이메일</label>
 					<input type="text" id="email"/>
+					<p className="text-guide text-colred">올바른 이메일을 입력해주세요.</p>
 				</div>
 				<div className="input-wrap">
 					<label htmlFor="pw">비밀번호</label>
 					<input type="password" id="pw" placeholder="********"/>
+					<p className="text-guide text-colred">비밀번호를 입력해주세요.</p>
 				</div>
 				{/* <button type="button" className="btn btn-goto">로그인</button> */}
 				<Link to="/Main" className="btn btn-goto">로그인</Link>

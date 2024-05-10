@@ -1,9 +1,58 @@
 import React from 'react';
 import Layout from '../../components/Layout';
+import { Popup } from '../../components/Popup';
+import $ from "jquery";
+
 
 const Detail = (props) => {
+
+  $(document).ready(function(){
+    $('.open-floating').on('click', function(){
+      if($('.floating-wrap').hasClass('active')){
+        $('.floating-wrap, .open-floating').removeClass('active');
+      } else {
+        $('.floating-wrap, .open-floating').addClass('active');
+      }
+    });
+
+
+    //삭제
+    $('.floating-wrap .btn-delete').on('click', function(){
+      $('.popup-challenge-delete').show();
+    });
+
+    //복습
+    $('.floating-wrap .btn-revise').on('click', function(){
+      $('.popup-word-revise').show();
+    });
+
+    //재도전
+    $('.floating-wrap .btn-retry').on('click', function(){
+      $('.popup-retry').show();
+    });
+
+
+  });
+
+
   return (
-		<Layout header={{title:'챌린지 결과', Backbtn:true, link:'/Main'}} containName='result'>
+		<Layout header={{title:'챌린지 결과', Backbtn:true, link:'/Challenge/Result'}} containName='result'>
+
+
+      <Popup popupName='popup-challenge-delete' btn confirmtext='삭제'>
+        챌린지 결과를<br/>
+        삭제하시겠습니까?
+      </Popup>
+
+      <Popup popupName='popup-word-revise' btn confirmtext='복습'>
+        영어 단어를<br/>
+        복습하시겠습니까?
+      </Popup>
+
+      <Popup popupName='popup-retry' btn confirmtext='재도전'>
+        다시 한번<br/>
+        재 도전 하시겠습니가까?
+      </Popup>
 
       <div className="select-wrap">
         <div className="select">
@@ -63,15 +112,15 @@ const Detail = (props) => {
 
       <div className="floating-wrap">
         <div className="dim-layer"></div>
-        <ul>
+        <ul className="btn-list">
           <li>
-            <button type="button">삭제<i className="icon-delete"></i></button>
+            <button type="button" className='btn-delete'>삭제<i className="icon-delete"></i></button>
           </li>
           <li>
-            <button type="button">단어복습<i className="icon-revise"></i></button>
+            <button type="button" className='btn-revise'>단어복습<i className="icon-revise"></i></button>
           </li>
           <li>
-            <button type="button">챌린지 재 도전<i className="icon-retry"></i></button>
+            <button type="button" className='btn-retry'>챌린지 재 도전<i className="icon-retry"></i></button>
           </li>
         </ul>
       </div>

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Layout from '../../components/Layout';
+import { Popup, Popup2 } from '../../components/Popup';
 
 import '../../assets/scss/challenge.scss';
 
@@ -21,28 +22,6 @@ const ChallengeView = (props) => {
             card.classList.add('active');
          }
       });
-
-      const request = new XMLHttpRequest();
-      const url = 'https://random-word-api.herokuapp.com/word?length=5';
-
-      request.open('GET', url, true);
-      request.onload = function () {
-         const words = request.responseText.slice(2, -2);
-         console.log(request.responseText);
-         document.querySelector('.word').innerHTML = words;
-
-         // const korequest = new XMLHttpRequest();
-         // const kourl = 'https://www.deepl.com/translator#en/ko/'+ words;
-
-         // korequest.open('GET', kourl, true);
-         // korequest.onload = function () {
-         //    console.log(korequest.responseText);
-         // }
-         // korequest.send();
-         
-      };
-      request.send();
-
    
    }, []);
 
@@ -51,22 +30,43 @@ const ChallengeView = (props) => {
 
    return (
       <Layout header containName='view'>
+
+         {pathname.startsWith('Study') && (
+				<Popup popupName='study-stop' btn confirmtext='확인'>
+               오늘의 공부를<br/>
+               끝내시겠습니까?
+            </Popup>
+         )} 
+
+
+         {pathname.startsWith('Challenge') && (
+				<Popup2 popupName='challenge-stop' title={'잠깐!\n아직 풀지 않은 문제들이 있습니다.'} btn challenge>
+               지금까지 푼 단어들은 저장 및 채점에 포함되지 않으므로, 처음부터 시작 하셔야 합니다. <br/><br/>
+               그래도 나가시겠습니까?
+            </Popup2>
+         )} 
+
+
          <div className="count-wrap">
             <div className="count">항목수
                <div className="num-area"><span>2</span>/<span>100</span></div>
             </div>
 
-            {pathname.startsWith('Challenge') && (
+            
                <div className="count wrong">오답수
-                  <div className="num-area"><span>2</span>/<span>100</span></div>
+                  <div className="num-area">
+                     {pathname.startsWith('Study') && (
+                        <span>2</span>/<span>100</span>
+                     )} 
+                  </div>
                </div>
-            )}
+            
          </div>
 
          <div className="card">
             <div className="front">
                <p className="grammar">명사</p>
-               <strong className="word">　</strong>
+               <strong className="word">word</strong>
                <button type="button" className="btn-sound">미국 영국 [Ig’zist]</button>
             </div>
             <div className="back">

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Layout from '../../components/Layout';
+import { Popup } from '../../components/Popup';
 import $ from "jquery";
 
 const Find = (props) => {
@@ -19,7 +20,7 @@ const Find = (props) => {
   
     $('.select li').on('click', function(){
       var selectText = $(this).text();
-      $(this).parent('ul').siblings('button').text(selectText);
+      $(this).parent('ul').hide().siblings('button').text(selectText);
   
       if($('.select button').text() === '직접입력') {
         $('#email_direct').show().focus();
@@ -42,9 +43,22 @@ const Find = (props) => {
     $('.find-step03').show();
   }
 
+  function reset() {
+    $('.edit-pw').show();
+  }
+
 
   return (
 		<Layout header={{title:'계정찾기', Backbtn:true, link:'/Login'}} containName='account'>
+
+      <Popup popupName='no-mail' btn confirmtext='확인'>
+        등록된 이메일이 없습니다.<br/>
+        회원가입 후 이용하세요.
+      </Popup>
+
+      <Popup popupName='edit-pw' btn confirmtext='확인'>
+        비밀번호를<br/>수정하시겠습니까?
+      </Popup>
 
 			<div className="find-step01">
         <div className="input-wrap">
@@ -91,7 +105,7 @@ const Find = (props) => {
           <input type="password" id="pw_change" placeholder="********"/>
         </div>
 
-        <button type="button" className="btn">비밀번호 수정</button>
+        <button type="button" className="btn" onClick={reset}>비밀번호 수정</button>
       </div>
 
 		</Layout>

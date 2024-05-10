@@ -34,7 +34,7 @@ a {color: inherit; text-decoration: none; }
 /* PC */
 @media (min-width: 376px) {
   #wrapper {
-    width: 375px; 
+    width: $frameSize; 
     margin: 0 auto; 
     box-shadow: 0px 0px 7px 0px rgba(113, 118, 130, 0.4); 
   }
@@ -52,7 +52,7 @@ a {color: inherit; text-decoration: none; }
   display: block;
   position: relative;
   width: 100%; height: 50px;
-  padding: 0 20px; box-sizing: border-box; 
+  padding: 10px 20px; box-sizing: border-box; 
 
   &::after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
 
@@ -87,15 +87,6 @@ a {color: inherit; text-decoration: none; }
 } 
 
 
-
-
-/* type-logo */
-#header {
-  padding: 10px 20px; 
-
-
-
-}
 
 
 /* ===================================================
@@ -172,7 +163,7 @@ a {color: inherit; text-decoration: none; }
 
 
 /* ===================================================
-	intro
+	intro (공통 top영역)
 ====================================================*/
 .intro-btn-group {
   width: 100%; 
@@ -181,6 +172,291 @@ a {color: inherit; text-decoration: none; }
 
   .btn + .btn {margin-top: 8px; }
 }
+
+
+
+
+
+/* ===================================================
+	popup
+====================================================*/
+#popup {
+  display: none;
+
+  .popup {
+    &-dim {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 301;
+    }
+
+    &-wrap {
+      position: absolute;
+      top: 50%; left: 50%;
+      width: calc(100% - 40px);
+      border-radius: 5px;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+      z-index: 302;
+    }
+
+    &-header {
+      padding: 20px 20px 0;
+
+      .popup-title {
+        display: block;
+        width: calc(100% - 23px);
+        font-size: 18px; line-height: 18px;
+        white-space: pre-wrap;
+      }
+    }
+
+    &-close {
+      position: absolute;
+      top: 20px; right: 20px;
+      width: 18px; height: 18px;
+      
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%; left: calc(50% - 1px);
+        width: 1px; height: 14px;
+        border-left: 1px solid #171717;
+        transform: translate(-50%, -50%) rotate(135deg);
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 1px; height: 14px;
+        border-left: 1px solid #171717;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    &-body {
+      padding: 40px 20px 50px;
+      font-size: 14px;
+      text-align: center; line-height: 18px;
+    }
+
+    &-btn-group {
+      display: flex; justify-content: center;
+      padding: 0 20px 20px; box-sizing: border-box;
+      gap: 15px;
+
+      .btn {
+        max-width: 50%;
+        height: 40px;
+        border-radius: 999px;
+        font-size: 14px; line-height: 40px;
+
+        &-cancel {
+          background-color: #f1f1f1;
+          border-color: #f1f1f1;
+          color: #686868;
+        }
+      }
+    }
+  }
+
+
+  /* style02 */
+  &.style02 {
+    .popup {
+      &-wrap {
+        border-radius: 20px;
+        background-color: #3F34C0;
+        color: #fff;
+      }
+
+      &-header {
+        padding-top: 40px;
+      }
+
+      &-body {
+        padding-bottom: 32px;
+        text-align: left;
+      }
+
+      &-btn-group {
+        .btn {
+          height: 50px;
+          border: 1px solid #fff;
+          background-color: #3F34C0;
+          font-size: 14px;
+          line-height: 48px;
+
+          & + .btn {
+            background-color: #fff;
+            color: #3F34C0;
+          }
+        }
+      }
+
+    }
+  }
+
+
+
+  /* style03 (튜토리얼) */
+  &.style03 {
+    display: block;
+
+    .popup {
+      &-wrap {
+        border-radius: 20px;
+      }
+
+      &-title {
+        line-height: 26px;
+      }
+
+      &-close {
+        height: 26px;
+      }
+
+      &-body {
+        padding: 8px 20px 24px;
+        text-align: left;
+      }
+
+      &-btn-group {
+        justify-content: right;
+
+        .btn {
+          width: auto; min-width: 70px;
+          background-color: #6558F5;
+          border-color: #6558F5;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
+
+
+/* PC */
+@media (min-width: 376px) {
+  #popup {
+    .popup-dim {
+      width: $frameSize; 
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}
+
+
+/* ===================================================
+	Layer
+====================================================*/
+#layer {
+  display: none;
+  .layer {
+    &-wrap {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: #fff;
+      z-index: 301;
+    }
+
+    &-header {
+      display: block;
+      position: relative;
+      width: 100%; height: 50px;
+      padding: 10px 20px; box-sizing: border-box; 
+
+      &::after {content: ""; clear: both; display: block; height: 0; visibility: hidden; }
+    }
+
+    &-title {
+      float: left;
+      margin-left: 12px;
+      font-size: 18px; font-weight: 300; line-height: 30px; color: $blackClr; 
+    }
+
+    &-close {
+      float: left;
+      width: 30px; height: 30px;
+      background-image: url("../images/header_back.png"); background-repeat: no-repeat;
+      background-size: auto 10px; background-position: left center; 
+    }
+
+    &-body {
+      display: block;
+      width: 100%; height: calc(100vh - 170px);
+      padding: 10px 20px 40px; box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    &-btn {
+      padding: 40px 20px 20px;
+    }
+  }
+
+}
+
+
+/* PC */
+@media (min-width: 376px) {
+  #layer {
+    .layer-wrap {
+      width: $frameSize; 
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+}
+
+
+
+/* 약관 스타일 */
+#policy {
+  h3 {
+    display: block;
+    margin-bottom: 36px;
+    font-size: 16px; font-weight: 300; line-height: 18px;
+    color: #FA7D38
+  }
+
+  strong {
+    display: block;
+    font-size: 14px; font-weight: 700; line-height: 18px;
+  }
+
+  .area {
+
+    margin-top: 36px;
+
+    .title {margin-bottom: 4px; }
+    p {
+      font-size: 12px; font-weight: 300; line-height: 14px;
+    }
+    
+  }
+
+  * + h3 {
+    margin-top: 36px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
