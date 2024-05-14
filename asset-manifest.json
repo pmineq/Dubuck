@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Dubuck/static/css/main.5a6d763a.css",
-    "main.js": "/Dubuck/static/js/main.dc90b702.js",
+    "main.js": "/Dubuck/static/js/main.d48397bb.js",
     "static/js/787.a32ce743.chunk.js": "/Dubuck/static/js/787.a32ce743.chunk.js",
     "static/media/KIMM_bold.woff2": "/Dubuck/static/media/KIMM_bold.ec59780b4493e25242c2.woff2",
     "static/media/KIMM_Light.ttf": "/Dubuck/static/media/KIMM_Light.ca86f545b13cffa9e2c8.ttf",
@@ -29,11 +29,11 @@
     "static/media/box_test.svg": "/Dubuck/static/media/box_test.828546efa6874bee2085.svg",
     "static/media/box_result.svg": "/Dubuck/static/media/box_result.8cb7885a57866b7ff2b2.svg",
     "main.5a6d763a.css.map": "/Dubuck/static/css/main.5a6d763a.css.map",
-    "main.dc90b702.js.map": "/Dubuck/static/js/main.dc90b702.js.map",
+    "main.d48397bb.js.map": "/Dubuck/static/js/main.d48397bb.js.map",
     "787.a32ce743.chunk.js.map": "/Dubuck/static/js/787.a32ce743.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5a6d763a.css",
-    "static/js/main.dc90b702.js"
+    "static/js/main.d48397bb.js"
   ]
 }
