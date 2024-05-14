@@ -1,5 +1,16 @@
 import React from 'react';
 import Layout from '../components/Layout';
+import $ from "jquery";
+
+
+//active
+$(document).ready(function(){
+  $('.emotion-wrap button').on('click', function(){
+    $(this).addClass('active');
+    $(this).parent('li').siblings().children('button').removeClass('active');
+  });
+})
+
 
 const Comment = (props) => {
   return (
@@ -17,7 +28,7 @@ const Comment = (props) => {
             <button type='button' className='btn-bad'>다신 사용 안한다</button>
           </li>
           <li>
-            <button type='button' className='btn-soso active'>아직 잘 모르겠다</button>
+            <button type='button' className='btn-soso'>아직 잘 모르겠다</button>
           </li>
           <li>
             <button type='button' className='btn-good'>쓸만하다</button>

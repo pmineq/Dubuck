@@ -445,14 +445,26 @@
 
         &.btn-bad {
           background-image: url('../images/icon_bad.png');
+
+          &.active {
+            background-image: url('../images/icon_bad_active.png');
+          }
         }
 
         &.btn-soso {
           background-image: url('../images/icon_soso.png');
+
+          &.active {
+            background-image: url('../images/icon_soso_active.png');
+          }
         }
 
         &.btn-good {
           background-image: url('../images/icon_good.png');
+
+          &.active {
+            background-image: url('../images/icon_good_active.png');
+          }
         }
         
       }
