@@ -18,25 +18,52 @@ const Main = (props) => {
 		//튜토리얼 최초진입
 		if (!localStorage.getItem('tutorial')) {
 
+			//좌표값 top
+			const box1offset = $('.box.calendar').offset().top,
+						message1offset = box1offset + 265; //출석체크
+
+			const box2offset = $('.box.study').offset().top,
+						message2offset = box2offset - 100; //영단어공부
+
+			const box3offset = $('.box.test').offset().top,
+						message3offset = box3offset - 100; //챌린지시험
+
+			const box4offset = $('.box.result').offset().top,
+						message4offset = box4offset - 100; //챌린지결과
+
+						
 			$('.tutorial-wrap').show();
+
+			//step01
 			$('.step01').show();
-		
-			
+			$('.step01').find('.area').css('top', box1offset);
+			$('.step01').find('.popup-wrap').css('top', message1offset);
+
+			//step02
 			$('.step01 .btn-next').on('click', function(){
 				$('.step01').hide();
 				$('.step02').show();
+				$('.step02').find('.area').css('top', box2offset);
+				$('.step02').find('.popup-wrap').css('top', message2offset);
 			});
 		
+			//step03
 			$('.step02 .btn-next').on('click', function(){
 				$('.step02').hide();
 				$('.step03').show();
+				$('.step03').find('.area').css('top', box3offset);
+				$('.step03').find('.popup-wrap').css('top', message3offset);
 			});
 		
+			//step04
 			$('.step03 .btn-next').on('click', function(){
 				$('.step03').hide();
 				$('.step04').show();
+				$('.step04').find('.area').css('top', box4offset);
+				$('.step04').find('.popup-wrap').css('top', message4offset);
 			});
 		
+			//start
 			$('.step04 .btn-next').on('click', function(){
 				$('.step04').hide();
 				$('.tutorial-start').show();
@@ -64,6 +91,7 @@ const Main = (props) => {
 
 				localStorage.setItem('tutorial', 'Y');
 			});
+
 		
 		}
 	}, [])
