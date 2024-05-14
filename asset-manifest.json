@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Dubuck/static/css/main.e228c648.css",
-    "main.js": "/Dubuck/static/js/main.6fbb2fab.js",
+    "main.css": "/Dubuck/static/css/main.38ff14df.css",
+    "main.js": "/Dubuck/static/js/main.9ab56d17.js",
     "static/js/787.a32ce743.chunk.js": "/Dubuck/static/js/787.a32ce743.chunk.js",
     "static/media/KIMM_bold.woff2": "/Dubuck/static/media/KIMM_bold.ec59780b4493e25242c2.woff2",
     "static/media/KIMM_Light.ttf": "/Dubuck/static/media/KIMM_Light.ca86f545b13cffa9e2c8.ttf",
@@ -24,16 +24,16 @@
     "static/media/slick.eot": "/Dubuck/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/Dubuck/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Dubuck/static/media/slick.295183786cd8a1389865.woff",
-    "static/media/box_study.svg": "/Dubuck/static/media/box_study.06c937e89c5ab16c259e.svg",
     "index.html": "/Dubuck/index.html",
+    "static/media/box_study.svg": "/Dubuck/static/media/box_study.06c937e89c5ab16c259e.svg",
     "static/media/box_test.svg": "/Dubuck/static/media/box_test.828546efa6874bee2085.svg",
     "static/media/box_result.svg": "/Dubuck/static/media/box_result.8cb7885a57866b7ff2b2.svg",
-    "main.e228c648.css.map": "/Dubuck/static/css/main.e228c648.css.map",
-    "main.6fbb2fab.js.map": "/Dubuck/static/js/main.6fbb2fab.js.map",
+    "main.38ff14df.css.map": "/Dubuck/static/css/main.38ff14df.css.map",
+    "main.9ab56d17.js.map": "/Dubuck/static/js/main.9ab56d17.js.map",
     "787.a32ce743.chunk.js.map": "/Dubuck/static/js/787.a32ce743.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e228c648.css",
-    "static/js/main.6fbb2fab.js"
+    "static/css/main.38ff14df.css",
+    "static/js/main.9ab56d17.js"
   ]
 }
